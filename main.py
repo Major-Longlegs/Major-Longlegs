@@ -4,7 +4,7 @@ from datetime import datetime
 from getpass import getpass
 # from config import *
 
-'''for importing from config, comment line 5, 8 and lines 21 to 24'''
+'''for importing from config, remove comment from line 5, comment on line 8 and lines 21 to 24'''
 gmaps = googlemaps.Client(key=getpass('Enter API Key:'))
 # gmaps = googlemaps.Client(key=input('Enter API Key:'))
 origin = input("Enter origin address: ")
