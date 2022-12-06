@@ -4,7 +4,7 @@ from datetime import datetime
 from getpass import getpass
 # from config import *
 
-
+'''for importing from config, comment line 8 and lines 21 to 24'''
 gmaps = googlemaps.Client(key=getpass('Enter API Key:'))
 # gmaps = googlemaps.Client(key=input('Enter API Key:'))
 origin = input("Enter origin address: ")
@@ -22,7 +22,9 @@ directions_result = gmaps.directions(origin,
                                      destination,
                                      mode="driving",
                                      departure_time=now)
-# print(directions_result)                                  
+# print(directions_result) \
+
+'''change directions_result into directions if importing from config'''
 
 ride_config = directions_result[0]
 ride_legs = ride_config['legs'][0]
