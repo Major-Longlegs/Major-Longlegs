@@ -9,8 +9,6 @@ gmaps = googlemaps.Client(key=getpass('Enter API Key:'))
 origin = input("Enter origin address: ")
 destination = input("Enter destination address: ")
 
-# Ride basefare
-ride_base_fare = 100
 
 
 '''
