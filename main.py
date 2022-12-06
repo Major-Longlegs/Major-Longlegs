@@ -29,7 +29,7 @@ now = datetime.now()
 
 '''change directions_result into directions if importing from config'''
 
-ride_config = directions_result [0]
+ride_config = directions_result[0]
 ride_legs = ride_config['legs'][0]
 ride_distance = ride_legs['distance']['value']
 
@@ -46,4 +46,4 @@ ride_fare_final_leg = final_leg_distance * 15
 
 total_fare = ride_fare_first_leg + ride_fare_final_leg
 print('Rs.'+str(total_fare))
-print('km.'+str(ride_distance/1000))
+
