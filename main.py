@@ -2,10 +2,10 @@
 import googlemaps
 from datetime import datetime
 from getpass import getpass
-# from config import *
+from config import *
 
-'''for importing from config, comment line 8 and lines 21 to 24'''
-gmaps = googlemaps.Client(key=getpass('Enter API Key:'))
+'''for importing from config, comment line 5, 8 and lines 21 to 24'''
+#gmaps = googlemaps.Client(key=getpass('Enter API Key:'))
 # gmaps = googlemaps.Client(key=input('Enter API Key:'))
 origin = input("Enter origin address: ")
 destination = input("Enter destination address: ")
@@ -18,15 +18,15 @@ For additional kms - Rs.15
 '''
 # Request directions via drive
 now = datetime.now()
-directions_result = gmaps.directions(origin,
-                                     destination,
-                                     mode="driving",
-                                     departure_time=now)
+# directions_result = gmaps.directions(origin,
+#                                      destination,
+#                                      mode="driving",
+#                                      departure_time
 # print(directions_result) \
 
 '''change directions_result into directions if importing from config'''
 
-ride_config = directions_result[0]
+ride_config = directions [0]
 ride_legs = ride_config['legs'][0]
 ride_distance = ride_legs['distance']['value']
 
