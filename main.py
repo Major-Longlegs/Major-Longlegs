@@ -6,6 +6,7 @@ from getpass import getpass
 
 
 gmaps = googlemaps.Client(key=getpass('Enter API Key:'))
+# gmaps = googlemaps.Client(key=input('Enter API Key:'))
 origin = input("Enter origin address: ")
 destination = input("Enter destination address: ")
 
@@ -39,4 +40,4 @@ ride_fare_first_leg = 2 * 30
 ride_fare_final_leg = final_leg_distance * 15
 
 total_fare = ride_fare_first_leg + ride_fare_final_leg
-print('Rs.'+total_fare)
+print('Rs.'+str(total_fare))
