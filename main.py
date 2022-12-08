@@ -42,7 +42,6 @@ total = first 2000 meters + remaining distance
 final_leg_distance = (ride_distance - 2000)/1000
 ride_fare_first_leg = 2 * 30
 ride_fare_final_leg = final_leg_distance * 15
-
 total_fare = ride_fare_first_leg + ride_fare_final_leg
-print('Rs.'+str(total_fare))
-
+print(f'The total fare is: {str(total_fare)} Rs.')
+print(f'The total distance is: {str(ride_distance/1000)} KM')
