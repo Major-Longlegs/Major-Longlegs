@@ -4,12 +4,12 @@ from datetime import datetime
 from getpass import getpass
 # from config import *
 
+
 '''for importing from config, comment line 5, 8 and lines 21 to 24'''
 gmaps = googlemaps.Client(key=getpass('Enter API Key:'))
 # gmaps = googlemaps.Client(key=input('Enter API Key:'))
 origin = input("Enter origin address: ")
 destination = input("Enter destination address: ")
-
 
 
 '''
@@ -24,7 +24,9 @@ directions_result = gmaps.directions(origin,
                                      departure_time=now)
 # print(directions_result) \
 
+
 '''change directions_result into directions if importing from config'''
+
 
 ride_config = directions_result [0]
 ride_legs = ride_config['legs'][0]
@@ -43,3 +45,4 @@ ride_fare_final_leg = final_leg_distance * 15
 
 total_fare = ride_fare_first_leg + ride_fare_final_leg
 print('Rs.'+str(total_fare))
+
